@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="#D6D7D7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rl">
+
+        <TextView
+            android:text="HP: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="52dp"
+            android:id="@+id/userHp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/dragon_dagger"
+            android:layout_marginBottom="67dp"
+            android:id="@+id/ddsButton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/whipButton"
+            android:layout_alignEnd="@+id/whipButton" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/dharok_greataxe"
+            android:layout_alignBottom="@+id/ddsButton"
+            android:layout_alignStart="@+id/agsButton"
+            android:id="@+id/dharokButton" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/abyssal_whip"
+            android:layout_marginBottom="59dp"
+            android:id="@+id/whipButton"
+            android:layout_above="@+id/dharokButton"
+            android:layout_alignStart="@+id/userHp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/armadyl_godsword"
+            android:layout_marginEnd="71dp"
+            android:id="@+id/agsButton"
+            android:layout_alignTop="@+id/whipButton"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text="Enemy: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/aiHP"
+            android:layout_alignBaseline="@+id/userHp"
+            android:layout_alignStart="@+id/agsButton" />
+
+        <Button
+            android:text="Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/whipButton"
+            android:layout_marginStart="22dp"
+            android:id="@+id/buttonStart" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sharkAmount"
+            android:layout_below="@+id/sharbButton"
+            android:layout_alignStart="@+id/sharbButton" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/winLose" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dharokButton"
+            android:layout_alignStart="@+id/ddsButton"
+            android:layout_marginTop="15dp"
+            android:id="@+id/prgSpecPlayer"
+            android:layout_alignEnd="@+id/aiHP"
+            android:max="100" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prgSpecPlayer"
+            android:layout_alignStart="@+id/prgSpecPlayer"
+            android:id="@+id/prgSpecEnemy"
+            android:layout_alignEnd="@+id/prgSpecPlayer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prgSpecPlayer"
+            android:layout_toEndOf="@+id/prgSpecEnemy"
+            android:id="@+id/lblSpecEnemy" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/prgSpecEnemy"
+            android:layout_toEndOf="@+id/prgSpecPlayer"
+            android:id="@+id/lblSpecPlayer" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/aiSharkAmount"
+            android:layout_alignStart="@+id/aiHP"
+            android:layout_alignTop="@+id/imageView2"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/player"
+            android:id="@+id/imageView2"
+            android:layout_marginEnd="19dp"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_above="@+id/agsButton"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/imageView"
+            android:layout_alignEnd="@+id/userHp"
+            android:layout_marginTop="33dp"
+            android:id="@+id/tvPlayerHit" />
+
+        <TextView
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tvPlayerHit"
+            android:layout_alignStart="@+id/aiSharkAmount"
+            android:id="@+id/tvAiHit" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/player"
+            android:id="@+id/imageView"
+            android:scaleX="-0.7"
+            android:scaleY="0.7"
+            android:layout_above="@+id/whipButton"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/shark"
+            android:id="@+id/sharbButton"
+            android:layout_below="@+id/agsButton"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</LinearLayout>

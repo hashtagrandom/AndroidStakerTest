@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@color/common_plus_signin_btn_text_light_disabled">
+
+    <ImageView
+        android:id="@+id/grid_image"
+        android:layout_width="40dp"
+        android:layout_height="40dp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/grid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:textSize="12sp"
+        android:layout_alignRight="@+id/grid_image"
+        android:layout_alignBottom="@+id/grid_image"
+        android:textColor="?android:attr/colorPressedHighlight"
+        android:textColorHighlight="@android:color/holo_orange_dark"
+        android:textStyle="normal|bold">
+    </TextView>
+
+</RelativeLayout>
